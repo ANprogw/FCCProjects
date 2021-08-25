@@ -1,0 +1,158 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <title>FCC: Technical Documentation Page</title>
+    </head>
+    <body id="sb-style-1" class="scroll-bar">
+        <nav id="navbar">
+            <header>JavaScript Syntax</header>
+            <hr id="navbar-hr" >
+            <ul id="sb-style-1" class="scroll-bar">
+                <li><a class="nav-link" href="#Introduction">Introduction</a><div id="arrow-down"></div></li>
+                <li><a class="nav-link" href="#Your_First_JavaScript_Code">Your First JavaScript Code</a></li>
+                <li><a class="nav-link" href="#Whitespace_and_Line_Breaks">Whitespace and Line Breaks</a></li>
+                <li><a class="nav-link" href="#Semicolons_are_Optional">Semicolons are Optional</a></li>
+                <li><a class="nav-link" href="#Case_Sensitivity">Case Sensitivity</a></li>
+                <li><a class="nav-link" href="#Comments_in_JavaScript">Comments in JavaScript</a></li>
+                <li><a class="nav-link" href="#Reference">Reference</a><div id="arrow-up"></div></li>
+            </ul>
+        </nav>
+        <main id="main-doc" >
+
+            <section id="Introduction" class="main-section">
+                <header>Introduction</header>
+                <p>JavaScript can be implemented using JavaScript statements that are placed within the 
+                    &lt;script> ... &lt;/script> HTML tags in a web page.</p>
+                <p>You can place the &lt;script> tags, containing your JavaScript, anywhere within your 
+                    web page, but it is normally recommended that you should keep it within the &lt;head> tags.</p>
+                <p>The &lt;script> tag alerts the browser program to start interpreting all the text 
+                    between these tags as a script. A simple syntax of your JavaScript will appear as follows.</p>
+                <pre id="sb-style-2" class="code-box scroll-bar"><code>
+&lt;script ...>
+    JavaScript code
+&lt;script>
+                </code></pre>
+                <p>The script tag takes two important attributes:</p>
+                <ul>
+                    <li>Language - This attribute specifies what scripting language you are using. 
+                        Typically, its value will be javascript. Although recent versions of HTML 
+                        (and XHTML, its successor) have phased out the use of this attribute.</li>
+                    <li>Type - This attribute is what is now recommended to indicate the scripting 
+                        language in use and its value should be set to "text/javascript".</li>
+                </ul>
+                <p>So your JavaScript segment will look like</p>
+                <pre id="sb-style-2" class="code-box scroll-bar" ><code>
+&lt;script language = "javascript" type = "text/javascript">
+    JavaScript code
+&lt;/script>
+                </code></pre>
+                <hr>
+            </section>
+
+            <section id="Your_First_JavaScript_Code" class="main-section">
+                <header>Your First JavaScript Code</header>
+                <p>Let us take a sample example to print out "Hello World". We added an optional HTML 
+                    comment that surrounds our JavaScript code. This is to save our code from a browser 
+                    that does not support JavaScript. The comment ends with a "//-->". Here "//" signifies 
+                    a comment in JavaScript, so we add that to prevent a browser from reading the end of 
+                    the HTML comment as a piece of JavaScript code. Next, we call a function document.write 
+                    which writes a string into our HTML document.</p>
+                <p>This function can be used to write text, HTML, or both. Take a look at the following code.</p>
+                <pre id="sb-style-2" class="code-box scroll-bar"><code>
+&lt;html>
+    &lt;body>   
+        &lt;script language = "javascript" type = "text/javascript">
+            &lt;!--
+                document.write("Hello World!")
+            //-->
+        &lt;/script>      
+    &lt;/body>
+&lt;/html>
+                </code></pre>
+                <p>This code will produce the following result</p>
+                <pre id="sb-style-2" class="code-box scroll-bar"><code>
+Hello World!
+                </code></pre>
+                <hr>
+            </section>
+
+            <section id="Whitespace_and_Line_Breaks" class="main-section">
+                <header>Whitespace and Line Breaks</header>
+                <p>JavaScript ignores spaces, tabs, and newlines that appear in JavaScript programs. You can use 
+                    spaces, tabs, and newlines freely in your program and you are free to format and indent your 
+                    programs in a neat and consistent way that makes the code easy to read and understand.</p>
+                <hr>
+            </section>
+
+            <section id="Semicolons_are_Optional" class="main-section">
+                <header>Semicolons are Optional</header>
+                <p>Simple statements in JavaScript are generally followed by a semicolon character, just as they 
+                    are in C, C++, and Java. JavaScript, however, allows you to omit this semicolon if each of 
+                    your statements are placed on a separate line. For example, the following code could be written 
+                    without semicolons.</p>
+                <pre id="sb-style-2" class="code-box scroll-bar"><code>
+&lt;script language = "javascript" type = "text/javascript">
+    &lt;!--
+        var1 = 10
+        var2 = 20
+    //-->
+&lt;/script>
+                </code></pre>
+                <p>But when formatted in a single line as follows, you must use semicolons</p>
+                <pre id="sb-style-2" class="code-box scroll-bar"><code>
+&lt;script language = "javascript" type = "text/javascript">
+    &lt;!--
+        var1 = 10; var2 = 20;
+    //-->
+&lt;/script>
+                </code></pre>
+                <p><strong>Note</strong> ━ It is a good programming practice to use semicolons.</p>
+                <hr>
+            </section>
+
+            <section id="Case_Sensitivity" class="main-section">
+                <header>Case Sensitivity</header>
+                <p>JavaScript is a case-sensitive language. This means that the language keywords, variables, function 
+                    names, and any other identifiers must always be typed with a consistent capitalization of letters.</p>
+                <p>So the identifiers Time and TIME will convey different meanings in JavaScript.</p>
+                <p><strong>Note</strong> ━ Care should be taken while writing variable and function names in JavaScript.</p>
+                <hr>
+            </section>
+
+            <section id="Comments_in_JavaScript" class="main-section">
+                <header>Comments in JavaScript</header>
+                <p>JavaScript supports both C-style and C++-style comments, thus:</p>
+                <ul>
+                    <li>Any text between a // and the end of a line is treated as a comment and is ignored by JavaScript.</li>
+                    <li>Any text between the characters /* and */ is treated as a comment. This may span multiple lines.</li>
+                    <li>JavaScript also recognizes the HTML comment opening sequence &lt;!--. JavaScript treats this as a single-line comment, just as it does the // comment.</li>
+                    <li>The HTML comment closing sequence --> is not recognized by JavaScript so it should be written as //-->.</li>
+                </ul>
+                <h3>Example</h3>
+                <p>The following example shows how to use comments in JavaScript.</p>
+                <pre id="sb-style-2" class="code-box scroll-bar"><code>
+&lt;script language = "javascript" type = "text/javascript">
+    &lt;!--
+        // This is a comment. It is similar to comments in C++
+                        
+        /*
+        * This is a multi-line comment in JavaScript
+        * It is very similar to comments in C Programming
+        */
+    //-->
+&lt;/script>                     
+                </code></pre>
+                <hr>
+            </section>
+
+            <section id="Reference" class="main-section">
+                <header>Reference</header>
+                <p>All documentation on this page is taken from 
+                    <a id="ref-link" href="https://www.tutorialspoint.com/javascript/javascript_syntax.htm" target="_blank">tutorialspoint.com</a>
+                </p>
+            </section>
+            
+        </main>
+        <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    </body>
+</html>
