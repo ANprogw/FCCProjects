@@ -1,0 +1,431 @@
+:root {
+    --headerheight: 80px;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--headerheight) - 1px); 
+    /* -1px because of pixel rounding on aspect-ratio property on #video, i think? */
+}
+
+body{
+    margin: 0;
+}
+
+h1{
+    font-size: 15em;
+    font-family: 'Amatic SC', cursive;
+    backdrop-filter: blur(0.5px);
+    margin: 0 70px 0 70px;
+}
+
+h2{
+    font-size: 2.5em;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+h3{
+    font-size: 1.25em;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 700;
+}
+
+h2, h3, p{
+    color: hsl(33, 100%, 5%);
+}
+
+#header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: var(--headerheight);
+    background-color: hsl(33, 100%, 99%);
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+#header-img{
+    height: 90%;
+    margin-left: 5px;
+    align-self: center;
+}
+
+#nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 700;
+    flex-wrap: wrap;
+}
+
+.nav-link{
+    color: black;
+    text-decoration: none; 
+    text-align: center;
+    margin: 0 50px;   
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 51px;
+}
+
+.nav-link:active{
+    padding-top: 2px;
+}
+
+.nav-link > p{
+    margin: 0;
+}
+
+main{
+    width: 100%;
+}
+
+section{
+    width: 100%;
+    height: calc(100vh - var(--headerheight));
+}
+
+#home{   
+    background: url(https://i.imgur.com/n4lfYp4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: var(--headerheight);
+}
+
+#home-div{
+    width: fit-content;
+    text-align: center;
+    color: hsl(33, 100%, 99%);
+}
+
+#about-us{
+    background-color: hsl(33, 100%, 90%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#about-us-img-div{
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#about-us-img{
+    width: 400px;
+    height: 400px;
+}
+
+#about-us-text-div{
+    width: 40%;
+    height: 400px;
+    box-sizing: border-box;
+    padding-right: 0px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+#about-us-text-div > p{
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#video{
+    width: 100%;
+    height: 100%;
+}
+
+#catalogue{
+    text-align: center;
+    background-color: hsl(33, 100%, 90%);
+}
+
+#catalogue > h2{
+    margin-top: 0;
+    padding-top: 75px;
+    margin-bottom: 75px;
+}
+
+#catalogue-products{
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product{
+    width: 400px;
+    height: 550px;
+    padding: 20px;
+    background-color: hsl(33, 100%, 94%);
+    border-radius: 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+.product-pic{
+    width: 400px;
+    height: 400px;
+}
+
+.product-button{
+    width: 100px;
+    height: 50px;
+    background-color: hsl(120, 100%, 25%);
+    color: hsl(33, 100%, 99%);
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 3%;
+    font-size: 1.2em;
+    margin-top: auto;
+    margin-bottom: 20px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+}
+
+.product-button:hover{
+    background-color: hsl(120, 100%, 30%);
+}
+
+.product-button:active{
+    background-color: hsl(120, 100%, 27%);
+    padding-top: 3px;
+}
+
+footer{
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: hsl(33, 100%, 10%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;  
+}
+
+footer > div > h3{
+    color: hsl(33, 100%, 99%);
+}
+
+#form{
+    margin: 0;
+    display: flex;
+    align-items: center;    
+}
+
+#email{
+    width: 200px;
+    padding: 10px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 500;
+    border: 1px solid hsl(33, 100%, 10%);
+    background-color: hsl(33, 100%, 99%);
+}
+
+#submit{
+    width: 80px;
+    height: 39px;
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: 600;
+    color: hsl(33, 100%, 10%);
+    background-color: hsl(33, 100%, 80%);
+    border: 1px solid hsl(33, 100%, 10%);
+    border-radius: 3%;
+    box-sizing: border-box;
+}
+
+#submit:hover{
+    background-color: hsl(33, 100%, 85%);
+}
+
+#submit:active{
+    background-color: hsl(33, 100%, 82%);
+    padding-top: 4px;
+}
+
+@media (max-width: 1595px) {
+
+    #product-video{
+        height: unset;
+        background-color: hsl(33, 100%, 90%);
+    }
+
+    #video{
+        height: unset;
+        aspect-ratio: 16/9;
+    }
+}
+
+@media (max-width: 1500px){
+
+    #catalogue > h2{
+        padding-top: 110px;
+        margin-bottom: 110px;
+    }
+
+    .product{
+        width: 300px;
+        height: 425px;
+        font-size: 0.8em;
+    }
+
+    .product-pic{
+        width: 300px;
+        height: 300px;
+    }
+
+    .product-button{
+        width: 80px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 1150px){
+
+    h2{
+        font-size: 2em;
+    }
+
+    .nav-link{
+        margin: 0 30px 0 30px;
+    }
+
+    #about-us-img{
+        width: 325px;
+        height: 325px;
+    }
+    
+    #about-us-text-div > p{
+        font-size: 1.2em;
+    }
+
+    #catalogue{
+        height: fit-content !important;
+    }
+
+    #catalogue > h2{
+        padding-top: 50px;
+        margin-bottom: 0;
+    }
+
+    #catalogue-products{
+        flex-direction: column;
+        height: 1560px;
+    }
+}
+
+@media (max-width: 870px){
+
+    h1{
+        font-size: 12em;
+    }
+
+    .nav-link{
+        margin: 0 20px 0 20px;
+    }
+
+    #about-us-img{
+        width: 280px;
+        height: 280px;
+    }
+    
+    #about-us{
+        flex-direction: column-reverse;
+    }
+
+    #about-us-img-div{
+        margin-top: 0;
+    }
+
+    #about-us-text-div{
+        width: 70%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 700px){
+
+    :root{
+        --headerheight: 160px;
+    }
+
+    #header-img{
+        height: 88%;
+        margin-left: 13px;
+    }
+
+    #nav-bar{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 450px){
+
+    h1{
+        font-size: 9em;
+        margin: 0 7px;
+    }
+
+    .nav-link{
+        height: 29px;
+    }
+
+    #catalogue-products{
+        height: 1360px;
+    }
+
+    .product{
+        width: 200px;
+        height: 350px;
+    }
+
+    .product-pic{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 340px) {  
+
+    #form{
+        flex-direction: column;
+    }
+
+    #submit{
+        width: 100px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-height: 925px) { 
+
+    #catalogue{
+        height: 845px;
+    }
+    
+}
+
+@media (max-height: 925px) { 
+
+    #home, #about-us{
+        height: 765px;
+    }
+    
+}

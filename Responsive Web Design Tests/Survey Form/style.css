@@ -1,0 +1,120 @@
+body{
+    margin: 0;
+}
+
+body::before{
+    content: '';
+    position: fixed;   
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: 
+        linear-gradient(to top, rgba(0, 25, 36, 0.6), rgba(0, 25, 36, 0.6)),
+        url(https://i.imgur.com/R9KtykM.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+body::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+}
+
+main{  
+    max-width: 700px;
+    margin: auto;
+    padding: 30px 30px 30px 30px;
+}
+
+#survey-form{
+    padding: 40px 40px 40px 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 35px;
+}
+
+header, #name, #email, #number, #dropdown, textarea, #submit{
+    border-radius: 5px; 
+}
+
+#title{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#description{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#title, #description{
+    text-align: center;
+    color: white;
+}
+
+section{
+    margin: 0 auto 35px auto;
+}
+
+input, #dropdown, textarea{
+    box-sizing: border-box;
+    border: 1px solid grey;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+label, .plabel{
+    color: white;
+    font-size: 1.3rem; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    align-items: center; 
+}
+
+#name-label, #email-label, #number-label, .plabel{
+    margin: 0 0 10px 0;
+}
+
+#name, #email, #number, #dropdown{
+    width: 100%;
+    height: 40px;
+}
+
+[type="radio"], [type="checkbox"]{  
+    width: 20px;
+    height: 20px;
+    margin: 5px 10px 5px 0;
+}
+
+textarea{
+    width: 100%;
+    min-height: 150px;
+    resize: vertical;
+    padding: 10px;
+}
+
+#submit{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
