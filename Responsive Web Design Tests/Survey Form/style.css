@@ -32,11 +32,11 @@ body::after{
 main{  
     max-width: 700px;
     margin: auto;
-    padding: 30px 30px 30px 30px;
+    padding: 30px;
 }
 
 #survey-form{
-    padding: 40px 40px 40px 40px;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     backdrop-filter: blur(30px);
@@ -117,4 +117,15 @@ textarea{
     font-size: 1.2rem;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media (max-width: 400px){
+
+    #survey-form{
+        padding: 25px;
+    }
+
+    label, .plabel{
+        font-size: 1.1rem;
+    }    
 }
